@@ -1,0 +1,21 @@
+# ── Directus CMS ────────────────────────────────────────────────────────────
+cms/.env
+cms/data.db
+cms/uploads/
+cms/logs/
+cms/node_modules/
+cms/extensions/*/node_modules/
+
+# ── Frontend ─────────────────────────────────────────────────────────────────
+node_modules/
+
+# ── OS / Editor ──────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ── Secrets ───────────────────────────────────────────────────────────────────
+*.env
+!*.env.example
+!*.env.local.example

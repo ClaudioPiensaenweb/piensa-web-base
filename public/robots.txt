@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Bloquear admin del CMS si está en el mismo dominio
+Disallow: /admin/
+Disallow: /cms/
+
+Sitemap: https://www.dominio.com/sitemap.xml

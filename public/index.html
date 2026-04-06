@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nombre del cliente</title>
+  <meta name="description" content="Descripción del cliente para SEO." />
+  <link rel="icon" href="/favicon.ico" />
+
+  <!-- CSS base -->
+  <link rel="stylesheet" href="/css/style.css" />
+
+  <!-- CDN: Tailwind (utilidades) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- CDN: Lucide icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <!-- CDN: GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- CDN: Lenis smooth scroll -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+
+  <!-- Config + estilos dinámicos (deben ir antes del body) -->
+  <script src="/js/config.js"></script>
+  <script src="/js/dynamic-styles.js"></script>
+</head>
+<body>
+
+  <!-- HEADER (renderizado por templates.js) -->
+  <header id="main-header"></header>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content">
+
+    <!-- ── Hero ───────────────────────────────── -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-text fade-up">
+          <h1 class="titulo-hero">Lorem ipsum dolor sit amet consectetur</h1>
+          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae.</p>
+          <div class="hero-actions">
+            <a href="#servicios" class="btn btn-filled">Ver servicios</a>
+            <a href="#footer-section" class="btn btn-outline scroll-to-footer">Contactar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Servicios ──────────────────────────── -->
+    <section id="servicios" class="section">
+      <div class="section-header fade-up">
+        <h2 class="titulo-1">Nuestros servicios</h2>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card fade-up">
+          <div class="card-body">
+            <div class="mb-4"><i data-lucide="zap" style="color:var(--color-primary);width:32px;height:32px;"></i></div>
+            <h3 class="titulo-3 mb-4">Servicio uno</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut wisi enim ad minim veniam.</p>
+          </div>
+        </div>
+        <div class="card fade-up">
+          <div class="card-body">
+            <div class="mb-4"><i data-lucide="shield-check" style="color:var(--color-primary);width:32px;height:32px;"></i></div>
+            <h3 class="titulo-3 mb-4">Servicio dos</h3>
+            <p>Quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</p>
+          </div>
+        </div>
+        <div class="card fade-up">
+          <div class="card-body">
+            <div class="mb-4"><i data-lucide="star" style="color:var(--color-primary);width:32px;height:32px;"></i></div>
+            <h3 class="titulo-3 mb-4">Servicio tres</h3>
+            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Quiénes somos (blurb) ──────────────── -->
+    <section class="section section-alt">
+      <div class="grid-2" style="align-items:center;gap:4rem;">
+        <div class="fade-up">
+          <h2 class="titulo-1 mb-4">Lorem ipsum dolor sit amet</h2>
+          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+          <p>Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          <div class="mt-8">
+            <a href="/quienes-somos" class="btn btn-filled">Más sobre nosotros</a>
+          </div>
+        </div>
+        <div class="fade-in">
+          <div style="background:#E5E7EB;border-radius:12px;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:#9CA3AF;font-size:.9rem;">
+            Imagen del cliente
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Blog / Últimas noticias ────────────── -->
+    <section class="section">
+      <div class="section-header fade-up">
+        <h2 class="titulo-1">Últimas noticias</h2>
+        <p>Novedades y artículos del blog cargados desde el CMS.</p>
+      </div>
+      <div id="blog-grid" class="grid-3">
+        <!-- Cargado dinámicamente desde Directus -->
+        <div class="card fade-in">
+          <div class="card-img"><div style="background:#E5E7EB;aspect-ratio:16/9;"></div></div>
+          <div class="card-body">
+            <span class="card-tag">Categoría</span>
+            <h3 class="titulo-3 mb-4">Lorem ipsum dolor sit amet consectetur</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus.</p>
+          </div>
+        </div>
+        <div class="card fade-in">
+          <div class="card-img"><div style="background:#E5E7EB;aspect-ratio:16/9;"></div></div>
+          <div class="card-body">
+            <span class="card-tag">Categoría</span>
+            <h3 class="titulo-3 mb-4">Vestibulum tortor quam feugiat vitae</h3>
+            <p>Quis nostrud exerci tation ullamcorper suscipit lobortis nisl.</p>
+          </div>
+        </div>
+        <div class="card fade-in">
+          <div class="card-img"><div style="background:#E5E7EB;aspect-ratio:16/9;"></div></div>
+          <div class="card-body">
+            <span class="card-tag">Categoría</span>
+            <h3 class="titulo-3 mb-4">Donec eu libero sit amet quam egestas</h3>
+            <p>Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER (renderizado por templates.js) -->
+  <footer id="footer-section"></footer>
+
+  <!-- Scripts -->
+  <script src="/js/templates.js"></script>
+  <script src="/js/script.js"></script>
+  <script>
+    renderHeader();
+    renderFooter();
+    // Cargar blog desde Directus
+    fetch(CMS_URL + '/items/posts?filter[status][_eq]=published&sort[]=-date_published&limit=3&fields[]=id,title,slug,excerpt,featured_image,date_published,categories.categories_id.name')
+      .then(function(r){ return r.json(); })
+      .then(function(data){
+        if (!data.data || !data.data.length) return;
+        var grid = document.getElementById('blog-grid');
+        grid.innerHTML = data.data.map(function(p){
+          var img = p.featured_image
+            ? '<img src="' + CMS_URL + '/assets/' + p.featured_image + '?width=640&height=360&fit=cover" alt="' + p.title + '" loading="lazy" />'
+            : '<div style="background:#E5E7EB;aspect-ratio:16/9;"></div>';
+          var cat = (p.categories && p.categories[0]) ? p.categories[0].categories_id.name : '';
+          return '<div class="card fade-in">'
+            + '<div class="card-img">' + img + '</div>'
+            + '<div class="card-body">'
+            + (cat ? '<span class="card-tag">' + cat + '</span>' : '')
+            + '<h3 class="titulo-3 mb-4"><a href="/blog/' + p.slug + '">' + p.title + '</a></h3>'
+            + (p.excerpt ? '<p>' + p.excerpt + '</p>' : '')
+            + '</div></div>';
+        }).join('');
+      });
+    lucide.createIcons();
+  </script>
+
+</body>
+</html>
